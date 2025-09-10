@@ -78,3 +78,51 @@ npm install
 # Install client dependencies
 cd ../client
 npm install
+
+
+## ⚙️ Environment Variables  
+
+To run this project, you will need to create **`.env` files** in both the **server** and **client** directories.  
+
+### 🔹 Server `.env`  
+
+```env
+PORT=4000
+MONGODB_URI=your_mongodb_connection_string
+
+# Clerk Authentication
+CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+
+# ImageKit Configuration
+IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key
+IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
+IMAGEKIT_URL_ENDPOINT=your_imagekit_url_endpoint
+
+# Email (SMTP) Configuration
+EMAIL_USER=your_email@domain.com
+EMAIL_PASS=your_email_password
+
+# Inngest Background Jobs
+INNGEST_EVENT_KEY=your_inngest_event_key
+
+
+# Clerk (Frontend)
+VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+
+# API URL (Backend server endpoint)
+VITE_API_URL=http://localhost:4000/api
+
+
+## ▶️ Run the App  
+
+```bash
+# Terminal 1 - Start backend
+cd server
+npm start
+
+# Terminal 2 - Start frontend
+cd client
+npm run dev
+
+
